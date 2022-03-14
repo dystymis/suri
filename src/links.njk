@@ -12,3 +12,91 @@ permalink: "{{ link }}/"
 {% else -%}
   <meta http-equiv=refresh content="0; url={{ links[link] }}">
 {% endif -%}
+<html>
+<head>
+<meta charset="UTF-8">
+<title>es3n1n</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="css/cube.css">
+<link rel="stylesheet" href="css/loader.css">
+<style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100&subset=cyrillic');
+
+        html,
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: #212121;
+            height: 100%;
+			overflow: hidden;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .text {
+            font-weight: 100;
+            font-size: 28px;
+            color: #fafafa;
+        }
+
+        .lite-ad {
+            font-weight: 100;
+            font-size: 28px;
+            color: #fafafa;
+        }
+
+        .dud {
+            color: #757575;
+        }
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+<center><div class="wrap">
+<div class="cube">
+<div class="front">
+@wizardzmeister
+</div>
+<div class="back">
+@tonwizardz
+</div>
+<div class="top">
+@wizardzchat
+</div>
+<div class="bottom">
+@wizardzmeister
+</div>
+<div class="left">
+@tonwizardz
+</div>
+<div class="right">
+@wizardzchat
+</div>
+</div>
+</div></center>
+<div class="container">
+</br><div class="text"></div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/index.js"></script>
+<script src="js/title.js"></script>
+<script>
+var phrases = ['Вход в Долину Кошельков', 'Тут ты можешь укоротить свой TON адрес', 'Хочешь также? Пиши @wizardzmeister', '@tonwizardz это ключ', 'Будь уникальным', 'За нами будущее', 'Вы вошли в метараздел сети Интернет', 'Окунись в новый мир', 'Этот мир тебя не разочарует', 'Вход в Долину Кошельков'];
+var el = document.querySelector('.text');
+var fx = new TextScramble(el);
+var counter = 0;
+var next = function next() {
+	fx.setText(phrases[counter]).then(function () {
+            setTimeout(next, 5000);
+    });
+    counter = (counter + 1) % phrases.length;
+};
+next();
+</script>
+</body>
+</html>
